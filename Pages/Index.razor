@@ -1,0 +1,26 @@
+﻿@page "/"
+
+<div id="wrapper">  
+    <SfCard Orientation="CardOrientation.Horizontal">
+        <CardImage Image="SampleImg.png"></CardImage>
+        <CardStacked>
+            <CardHeader Title="Debunking Five Data Science Myths"
+                        SubTitle="Webinar from Syncfusion"></CardHeader>
+            <CardContent Content="Tech evangelists are currently pounding their pulpits about all things AI,
+                 machine learning, analytics—anything that sounds"></CardContent>
+            @*Include Orientation="CardOrientation.Vertical" in below tag to align the action buttons vertically*@
+            <CardFooter>
+                <CardFooterContent>
+                    <SfButton CssClass="e-primary">Read More</SfButton>
+                    <SfButton CssClass="e-primary">Subscribe</SfButton>
+                </CardFooterContent>
+            </CardFooter>
+        </CardStacked>
+    </SfCard>
+</div>
+
+<style>
+    #wrapper{
+        text-align: center;
+    }
+</style>
