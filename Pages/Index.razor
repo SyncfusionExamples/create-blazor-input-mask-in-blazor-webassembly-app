@@ -1,0 +1,36 @@
+﻿@page "/"
+
+    <div id="wrapper">
+        @*Add CustomCharacters="@CustomMaskValue" and Mask="00:00 > PM" in below code to add Custom Mask Value*@
+        <SfMaskedTextBox Mask="[0-9][0-9][0-9][0-9]"
+                         Value="@MaskValue"
+                         FloatLabelType="FloatLabelType.Auto"
+                         Placeholder="Enter Pin Code"
+                         PromptChar="#"
+                         @onkeypress="ChangeValueOnKeyPress"></SfMaskedTextBox>
+        <p>@*OTP sent to Mobile No: @MaskValue*@</p>
+    </div>
+
+@code{
+    public string MaskValue { get; set; } = "9841000386";
+
+    public void ChangeValueOnKeyPress()
+    {
+        MaskValue = "2323";
+    }
+
+    //Uncomment for Custom Mask Element
+    //public Object CustomMaskValue { get; set; } = new
+    //{
+    //    P = "A,a,P,p",
+    //    M = "M,m"
+    //};
+}
+
+<style>
+    #wrapper{
+        text-align:center;
+        width: 30%;
+        margin: 0 auto;
+    }
+</style>
