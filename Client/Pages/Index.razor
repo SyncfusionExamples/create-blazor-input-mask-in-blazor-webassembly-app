@@ -1,0 +1,28 @@
+﻿@page "/"
+
+<div id="wrapper">
+    <SfMaskedTextBox Mask="[0-9][0-9][0-9][0-9]"
+                     Value="@MaskValue"
+                     FloatLabelType="FloatLabelType.Auto"
+                     Placeholder="Enter Pin Code"
+                     PromptChar="@PromptCharacter"
+                     @onkeypress="ChangeValueOnKeyPress"></SfMaskedTextBox>
+</div>
+
+@code {
+    public string MaskValue { get; set; } = "9841000386";
+    public char PromptCharacter = '#';
+    public void ChangeValueOnKeyPress()
+    {
+        MaskValue = "2323";
+    }
+
+}
+
+<style>
+    #wrapper {
+        text-align: center;
+        width: 30%;
+        margin: 0 auto;
+    }
+</style>
